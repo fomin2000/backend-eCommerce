@@ -25,6 +25,7 @@ router.get('/:id', (req, res) => {
       id: req.params.id,
     },
     include: {
+      model: Product,
       attributes: ['product_name', 'price', 'stock', 'category_id'],
     },
   })
